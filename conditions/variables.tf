@@ -1,3 +1,7 @@
+variable "environment" {
+    default = "dev"
+}
+
 variable "ami_id" {
     type = string
     default = "ami-0220d79f3f480ecf5"
@@ -14,7 +18,7 @@ variable "instance_type" {
 variable "tags" {
     type = map
     default = {
-        Name = "variables-demo"
+        Name = "terraform"
         project = "roboshop"
         terraform = "true"
         environment = "dev"
@@ -23,7 +27,7 @@ variable "tags" {
 
 variable "sg_group" {
     type = string
-    default = "terraform-apply-all-deault"
+    default = "terraform-apply-all"
 }
 
 variable "sg_group_discription" {
