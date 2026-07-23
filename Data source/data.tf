@@ -1,6 +1,6 @@
 data "aws_ami" "RoboShop" {
   most_recent = true
-  owners      = ["152537192595"]
+  owners      = ["973714476881"]
 
   filter {
     name   = "name"
@@ -16,4 +16,8 @@ data "aws_ami" "RoboShop" {
     name   = "virtualization-type"
     values = ["hvm"]
   }
+}
+
+data "aws_instance" "chaitu_instance" {
+    instance_id = "i-05bde9c8bcb475c80"
 }
